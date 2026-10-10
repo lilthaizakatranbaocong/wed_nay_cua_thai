@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEON WORLD</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080812;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292943;
+}
+
+.logo {
+    color: #00f7ff;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f7ff;
+}
+
+main {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+h1 {
+    font-size: clamp(40px, 8vw, 85px);
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+h1 span {
+    color: #00f7ff;
+}
+
+p {
+    color: #b9b9cc;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid #00f7ff;
+    border-radius: 8px;
+    color: #00f7ff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00f7ff;
+    color: #080812;
+    box-shadow: 0 0 30px #00f7ff;
+    transform: translateY(-3px);
+}
+
+#message {
+    margin-top: 25px;
+    color: #00f7ff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    border-top: 1px solid #292943;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #00f7ff; }
+    to { text-shadow: 0 0 35px #00f7ff; }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <div class="logo">NEON WORLD</div>
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+    </nav>
+</header>
+
+<main id="home">
+    <h1>WELCOME TO <span>MY WORLD</span></h1>
+    <p id="about">
+        Khám phá thế giới sáng tạo của riêng bạn.<br>
+        Dark mode • Neon effects • Modern design
+    </p>
+
+    <button onclick="hello()">KHÁM PHÁ NGAY ⚡</button>
+    <div id="message"></div>
+</main>
+
+<footer>
+    © 2026 NEON WORLD | Made with passion.
+</footer>
+
+<script>
+function hello() {
+    document.getElementById("message").textContent =
+        "🔥 Chào mừng đến với thế giới của tôi!";
+}
+</script>
+</body>
+</html>
